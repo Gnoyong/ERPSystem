@@ -1,40 +1,28 @@
-package org.shop.controller.user;
+package org.shop.controller;
 
-import java.io.Reader;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.shop.pojo.Hw;
+import org.shop.pojo.Sh;
+import org.shop.pojo.User;
+import org.shop.service.HwService;
+import org.shop.service.ShService;
+import org.shop.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Random;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.shop.pojo.Hw;
-import org.shop.pojo.Sh;
-import org.shop.pojo.User;
-import org.shop.service.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
-import net.sf.json.JSONObject;
 
 @Controller
 @RequestMapping("/user/")

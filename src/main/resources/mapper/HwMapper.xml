@@ -4,41 +4,50 @@
 <mapper namespace="org.shop.dao.HwDao">
 	<!-- 商品列表 -->
 	<select id="sp" parameterType="org.shop.pojo.Hw" resultType="map">
-	select * from hw where sj=#{sj} and sh=#{sh}
-	<if test="name != null">
-	and name like "%"#{name}"%"
-	</if>
-	</select>
+        select * from "hw" where "sj"=#{sj} and "sh"=#{sh}
+        <if test="name != null">
+            and "name" like '%' || #{name} || '%'
+        </if>
+    </select>
 	
 	<!-- 商品上下架信息 -->
 	<update id="spxj" parameterType="org.shop.pojo.Hw" >
-	update hw set date=#{date},sj=#{sj},sh=#{sh} where id=#{id}
-	</update>
+        update "hw"
+        set "date"=#{date},
+            "sj"=#{sj},
+            "sh"=#{sh}
+        where "id" = #{id}
+    </update>
 	
 	<!-- 入库单新建 -->
 	<insert id="xjrk" parameterType="org.shop.pojo.Hw">
-	insert into hw(name,number,money,phone,gy,date,sj,sh,zrr) value(#{name},#{number},#{money},#{phone},#{gy},#{date},#{sj},#{sh},#{zrr})
-	</insert>
+        insert into "hw"("id", "name", "number", "money", "phone", "gy", "date", "sj", "sh",
+                         "zrr") values (HW_ID_SEQ.NEXTVAL, #{name}, #{number},
+                                       #{money}, #{phone},
+                                       #{gy}, #{date},
+                                       #{sj}, #{sh},
+                                       #{zrr})
+    </insert>
 	
 	<select id="dy" parameterType="int"  resultType="org.shop.pojo.Hw">
-	select * from hw where id=#{id}
+	select * from "hw" where "id"=#{id}
 	</select>
 	
 	<select id="dys" parameterType="String"  resultType="org.shop.pojo.Hw">
-	select * from hw where name=#{name}
+	select * from "hw" where "name"=#{name}
 	</select>
 	
 	<!-- 商品上下架信息 -->
 	<update id="ckkk" parameterType="org.shop.pojo.Hw" >
-	update hw set date=#{date},number=#{number} where name=#{name}
+	update "hw" set "date"=#{date},"number"=#{number} where "name"=#{name}
 	</update>
 	
 	<delete id="jj" parameterType="int">
-		delete from hw where id=#{id}
+		delete from "hw" where "id"=#{id}
 	</delete>
 	
 	<update id="updateHw" parameterType="org.shop.pojo.Hw" >
-	update hw set date=#{date},number=#{number},name=#{name},money=#{money},gy=#{gy},phone=#{phone} where id=#{id}
+	update "hw" set "date"=#{date},"number"=#{number},"name"=#{name},"money"=#{money},"gy"=#{gy},"phone"=#{phone} where "id"=#{id}
 	</update>
 	
 </mapper>

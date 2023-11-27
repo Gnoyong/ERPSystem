@@ -36,11 +36,11 @@ public class IouServiceImpl implements IouService {
      * @param pageRequest 分页对象
      * @return 查询结果
      */
-    @Override
+/*    @Override
     public Page<Iou> queryByPage(Iou iou, PageRequest pageRequest) {
         long total = this.iouDao.count(iou);
         return new PageImpl<>(this.iouDao.queryAllByLimit(iou, pageRequest), pageRequest, total);
-    }
+    }*/
 
     /**
      * 新增数据

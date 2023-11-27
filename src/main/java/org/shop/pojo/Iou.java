@@ -1,4 +1,4 @@
-package org.shop.entity;
+package org.shop.pojo;
 
 import java.util.Date;
 import java.io.Serializable;

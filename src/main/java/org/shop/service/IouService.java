@@ -1,8 +1,6 @@
-service;
+package org.shop.service;
 
-import .entity.Iou;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import org.shop.pojo.Iou;
 
 /**
  * (Iou)表服务接口
@@ -23,11 +21,11 @@ public interface IouService {
     /**
      * 分页查询
      *
-     * @param iou 筛选条件
-     * @param pageRequest      分页对象
+     * @param iou         筛选条件
+     * @param pageRequest 分页对象
      * @return 查询结果
      */
-    Page<Iou> queryByPage(Iou iou, PageRequest pageRequest);
+//    Page<Iou> queryByPage(Iou iou, PageRequest pageRequest);
 
     /**
      * 新增数据

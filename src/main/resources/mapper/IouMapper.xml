@@ -4,17 +4,17 @@
 
     <resultMap type="org.shop.pojo.Iou" id="IouMap">
         <result property="id" column="ID" jdbcType="INTEGER"/>
-        <result property="customerId" column="CUSTOMER_ID," jdbcType="INTEGER"/>
-        <result property="hwId" column="HW_ID," jdbcType="INTEGER"/>
-        <result property="NUM," column="NUM," jdbcType="INTEGER"/>
-        <result property="checkoutDate" column="CHECKOUT_DATE," jdbcType="TIMESTAMP"/>
-        <result property="returnDate" column="RETURN_DATE," jdbcType="TIMESTAMP"/>
+        <result property="customerId" column="CUSTOMER_ID" jdbcType="INTEGER"/>
+        <result property="hwId" column="HW_ID" jdbcType="INTEGER"/>
+        <result property="num" column="NUM" jdbcType="INTEGER"/>
+        <result property="checkoutDate" column="CHECKOUT_DATE" jdbcType="TIMESTAMP"/>
+        <result property="returnDate" column="RETURN_DATE" jdbcType="TIMESTAMP"/>
         <result property="status" column="STATUS" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="IouMap">
-        select IDCUSTOMER_ID,HW_ID,NUM,CHECKOUT_DATE,RETURN_DATE,STATUS
+        select ID, CUSTOMER_ID, HW_ID, NUM, CHECKOUT_DATE, RETURN_DATE, STATUS
         from IOU
         where ID = #{id}
     </select>
@@ -22,26 +22,26 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="IouMap">
         select
-        IDCUSTOMER_ID,HW_ID,NUM,CHECKOUT_DATE,RETURN_DATE,STATUS
+        ID,CUSTOMER_ID,HW_ID,NUM,CHECKOUT_DATE,RETURN_DATE,STATUS
         from IOU
         <where>
             <if test="id != null">
                 and ID = #{id}
             </if>
             <if test="customerId != null">
-                and CUSTOMER_ID, = #{customerId}
+                and CUSTOMER_ID = #{customerId}
             </if>
             <if test="hwId != null">
-                and HW_ID, = #{hwId}
+                and HW_ID = #{hwId}
             </if>
-            <if test="NUM, != null">
-                and NUM, = #{NUM,}
+            <if test="NUM != null">
+                and NUM = #{NUM}
             </if>
             <if test="checkoutDate != null">
-                and CHECKOUT_DATE, = #{checkoutDate}
+                and CHECKOUT_DATE = #{checkoutDate}
             </if>
             <if test="returnDate != null">
-                and RETURN_DATE, = #{returnDate}
+                and RETURN_DATE = #{returnDate}
             </if>
             <if test="status != null">
                 and STATUS = #{status}
@@ -59,19 +59,19 @@
                 and ID = #{id}
             </if>
             <if test="customerId != null">
-                and CUSTOMER_ID, = #{customerId}
+                and CUSTOMER_ID = #{customerId}
             </if>
             <if test="hwId != null">
-                and HW_ID, = #{hwId}
+                and HW_ID = #{hwId}
             </if>
-            <if test="NUM, != null">
-                and NUM, = #{NUM,}
+            <if test="NUM != null">
+                and NUM = #{NUM}
             </if>
             <if test="checkoutDate != null">
-                and CHECKOUT_DATE, = #{checkoutDate}
+                and CHECKOUT_DATE = #{checkoutDate}
             </if>
             <if test="returnDate != null">
-                and RETURN_DATE, = #{returnDate}
+                and RETURN_DATE = #{returnDate}
             </if>
             <if test="status != null">
                 and STATUS = #{status}
@@ -81,27 +81,8 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into IOU(CUSTOMER_ID,HW_ID,NUM,CHECKOUT_DATE,RETURN_DATE,STATUS)
-        values (#{customerId}#{hwId}#{NUM,}#{checkoutDate}#{returnDate}#{status})
-    </insert>
-
-    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
-        insert into IOU(CUSTOMER_ID,HW_ID,NUM,CHECKOUT_DATE,RETURN_DATE,STATUS)
-        values
-        <foreach collection="entities" item="org.shop.entity" separator=",">
-            (#{entity.customerId}#{entity.hwId}#{entity.NUM,}#{entity.checkoutDate}#{entity.returnDate}#{entity.status})
-        </foreach>
-    </insert>
-
-    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
-        insert into IOU(CUSTOMER_ID,HW_ID,NUM,CHECKOUT_DATE,RETURN_DATE,STATUS)
-        values
-        <foreach collection="entities" item="org.shop.entity" separator=",">
-            (#{entity.customerId}#{entity.hwId}#{entity.NUM,}#{entity.checkoutDate}#{entity.returnDate}#{entity.status})
-        </foreach>
-        on duplicate key update
-        CUSTOMER_ID, = values(CUSTOMER_ID,)HW_ID, = values(HW_ID,)NUM, = values(NUM,)CHECKOUT_DATE, =
-        values(CHECKOUT_DATE,)RETURN_DATE, = values(RETURN_DATE,)STATUS = values(STATUS)
+        insert into IOU(CUSTOMER_ID, HW_ID, NUM, CHECKOUT_DATE, RETURN_DATE, STATUS)
+        values (#{customerId}, #{hwId}, #{NUM}, #{checkoutDate}, #{returnDate}, #{status})
     </insert>
 
     <!--通过主键修改数据-->
@@ -109,22 +90,22 @@
         update IOU
         <set>
             <if test="customerId != null">
-                CUSTOMER_ID, = #{customerId},
+                CUSTOMER_ID = #{customerId}
             </if>
             <if test="hwId != null">
-                HW_ID, = #{hwId},
+                HW_ID = #{hwId}
             </if>
-            <if test="NUM, != null">
-                NUM, = #{NUM,},
+            <if test="NUM != null">
+                NUM = #{NUM}
             </if>
             <if test="checkoutDate != null">
-                CHECKOUT_DATE, = #{checkoutDate},
+                CHECKOUT_DATE = #{checkoutDate}
             </if>
             <if test="returnDate != null">
-                RETURN_DATE, = #{returnDate},
+                RETURN_DATE = #{returnDate}
             </if>
             <if test="status != null">
-                STATUS = #{status},
+                STATUS = #{status}
             </if>
         </set>
         where ID = #{id}
