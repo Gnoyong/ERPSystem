@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.shop</groupId>
+    <artifactId>damn-project</artifactId>
+    <version>1.0.0</version>
+
+    <!-- 添加项目的描述信息 -->
+    <name>Your Project</name>
+    <description>Short description of your project</description>
+
+    <!-- 项目的主要信息 -->
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- 添加其他项目属性 -->
+    </properties>
+
+    <!-- 项目的依赖 -->
+    <dependencies>
+        <!-- 例如添加 Spring Boot Starter 依赖 -->
+        <!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        -->
+    </dependencies>
+
+    <!-- Maven插件配置 -->
+    <build>
+        <plugins>
+        </plugins>
+    </build>
+</project>
