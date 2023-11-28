@@ -49,35 +49,10 @@
 </head>
 <body>
 	<!--header-->
-	<header>
-		<h1>
-			<%-- <img
-				src="${pageContext.request.contextPath}/assets/images/admin_logo.png" /> --%>
-		</h1>
-		<ul class="rt_nav">
-	<li><a href="tzzups" class="set_icon">账号设置</a></li>
-	
-			<li><a href="tzlogin" class="quit_icon">安全退出</a></li>
-		</ul>
-	</header>
+	<jsp:include page="/WEB-INF/views/header.jsp" />
 	<!--aside nav-->
 	<!--aside nav-->
-	<aside class="lt_aside_nav content mCustomScrollbar">
-
-		<ul>
-			
-		
-			
-			<li>
-				<dl>
-					<dt>出库信息管理</dt>									
-					<dd>
-						<a href="tzckxs" class="active">出库单新建</a>
-					</dd>
-				</dl>
-			</li>
-		</ul>
-	</aside>
+	<jsp:include page="/WEB-INF/views/aside.jsp" />
 	<section class="rt_wrap content mCustomScrollbar">
 		<div class="rt_content">
 			<div class="page_title">
@@ -115,7 +90,7 @@
 							<td id="date" class="center">${list.date}</td>
 							<td id="zrr" class="center">${list.zrr}</td>
 							<td class="center"> 
-							<a href="ckidxs?id=${list.id}">
+							<a href="${pageContext.request.contextPath}\user\ckidxs?id=${list.id}">
 							<input type="button" class="link_btn" value="出库" >
 								</a>
 								</td>

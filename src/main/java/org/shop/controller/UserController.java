@@ -430,7 +430,8 @@ public class UserController {
 	
 	
 	@RequestMapping("tzzups")
-	public String tzzups(Model model,HttpSession session) {
+	public String
+	tzzups(Model model,HttpSession session) {
 		int  id=(int) session.getAttribute("id");
 		User user = u.findid(id);
 		model.addAttribute("user", user);

@@ -29,77 +29,10 @@
 </head>
 <body>
 	<!--header-->
-	<header>
-		<h1>
-			<%-- <img
-				src="${pageContext.request.contextPath}/assets/images/admin_logo.png" /> --%>
-		</h1>
-		<ul class="rt_nav">
-			<li><a href="tzzup" class="set_icon">账号设置</a></li>
-			<li><a href="tzlogin" class="quit_icon">安全退出</a></li>
-		</ul>
-	</header>
+	<jsp:include page="/WEB-INF/views/header.jsp" />
 	<!--aside nav-->
 	<!--aside nav-->
-	<aside class="lt_aside_nav content mCustomScrollbar">
-
-		<ul>
-			<li>
-				<dl>
-					<dt>用户信息管理</dt>
-					<!--当前链接则添加class:active-->
-					<dd>
-						<a href="sy" class="active">用户查询</a>
-					</dd>
-					<dd>
-						<a href="tjyh">用户添加</a>
-					</dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt>货物信息管理</dt>
-					<dd>
-						<a href="tzhw">货物查询</a>
-					</dd>
-					<dd>
-						<a href="tzkc">库存查询</a>
-					</dd>					
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt>入库单信息管理</dt>					
-					<dd>
-						<a href="tzrk">入库单新建</a>
-					</dd>					
-					<dd>
-						<a href="tzrksh">入库单审核</a>
-					</dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt>出库信息管理</dt>									
-					<dd>
-						<a href="tzck">出库单新建</a>
-					</dd>
-					<dd>
-						<a href="tzcksh">出库单审核</a>
-					</dd>
-
-				</dl>
-			</li>
-            <!-- <li>
-				<dl>
-					<dt>报表管理</dt>
-					<dd>
-						<a href="tzbb">生成报表</a>
-					</dd>
-				</dl>
-			</li> -->
-		</ul>
-	</aside>
+	<jsp:include page="/WEB-INF/views/aside.jsp" />
 
 	<section class="rt_wrap content mCustomScrollbar">
 	<div id="container" style="min-width:400px;height:400px"></div>
