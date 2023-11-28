@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.shop.pojo.Iou">
+<mapper namespace="org.shop.dao.IouDao">
 
     <resultMap type="org.shop.pojo.Iou" id="IouMap">
         <result property="id" column="ID" jdbcType="INTEGER"/>
@@ -118,5 +118,8 @@
         where ID = #{id}
     </delete>
 
+    <select id="queryList" parameterType="org.shop.pojo.Iou" resultType="map">
+        select * from IOU
+    </select>
 </mapper>
 

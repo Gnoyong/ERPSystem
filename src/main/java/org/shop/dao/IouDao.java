@@ -77,5 +77,7 @@ public interface IouDao {
      */
     int deleteById(Long id);
 
+    List<Iou> queryList(Iou iou);
+
 }
 

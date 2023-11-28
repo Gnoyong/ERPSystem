@@ -2,10 +2,10 @@ package org.shop.service.impl;
 
 import org.shop.dao.IouDao;
 import org.shop.pojo.Iou;
-import org.shop.service.IouService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Iou)表服务实现类
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * @since 2023-11-27 21:18:16
  */
 @Service("iouService")
-public class IouServiceImpl implements IouService {
+public class IouService {
     @Resource
     private IouDao iouDao;
 
@@ -24,7 +24,6 @@ public class IouServiceImpl implements IouService {
      * @param id 主键
      * @return 实例对象
      */
-    @Override
     public Iou queryById(Long id) {
         return this.iouDao.queryById(id);
     }
@@ -48,7 +47,6 @@ public class IouServiceImpl implements IouService {
      * @param iou 实例对象
      * @return 实例对象
      */
-    @Override
     public Iou insert(Iou iou) {
         this.iouDao.insert(iou);
         return iou;
@@ -60,7 +58,6 @@ public class IouServiceImpl implements IouService {
      * @param iou 实例对象
      * @return 实例对象
      */
-    @Override
     public Iou update(Iou iou) {
         this.iouDao.update(iou);
         return this.queryById(iou.getId());
@@ -72,8 +69,12 @@ public class IouServiceImpl implements IouService {
      * @param id 主键
      * @return 是否成功
      */
-    @Override
     public boolean deleteById(Long id) {
         return this.iouDao.deleteById(id) > 0;
+    }
+
+
+    public List<Iou> queryList(Iou iou) {
+        return this.iouDao.queryList(iou);
     }
 }
