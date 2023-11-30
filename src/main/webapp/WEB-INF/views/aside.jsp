@@ -54,25 +54,25 @@
 
             </dl>
         </li>
-        <li>
-            <dl>
-                <dt>借出单信息管理</dt>
-                <dd>
-                    <a href="${pageContext.request.contextPath}\iou\list">借出单查询</a>
-                </dd>
-                <dd>
-                    <a href="${pageContext.request.contextPath}\user\tzcksh">借出单新建</a>
-                </dd>
+        <%--        <li>--%>
+        <%--            <dl>--%>
+        <%--                <dt>借出单信息管理</dt>--%>
+        <%--                <dd>--%>
+        <%--                    <a href="${pageContext.request.contextPath}\iou\list">借出单查询</a>--%>
+        <%--                </dd>--%>
+        <%--                <dd>--%>
+        <%--                    <a href="${pageContext.request.contextPath}\user\tzcksh">借出单新建</a>--%>
+        <%--                </dd>--%>
 
-            </dl>
-        </li>
-        <!-- <li>
+        <%--            </dl>--%>
+        <%--        </li>--%>
+        <li>
             <dl>
                 <dt>报表管理</dt>
                 <dd>
                     <a href="${pageContext.request.contextPath}\user\tzbb">生成报表</a>
                 </dd>
             </dl>
-        </li>	 -->
+        </li>
     </ul>
 </aside>

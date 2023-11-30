@@ -25,9 +25,7 @@
 		where "sh" = 0
 	</select>
 	<select id="bb" resultType="Map">
-		select "sh"."hw" 'hw', sum("lr") 'lr'
-		from "sh"
-		group by "sh"."hw"
+		SELECT "sh"."hw" as "hw", SUM("sh"."lr") as "lr" FROM "sh" GROUP BY "sh"."hw"
 	</select>
 	<select id="bbs" resultType="Map">
 		select sum("lr") '利润'
