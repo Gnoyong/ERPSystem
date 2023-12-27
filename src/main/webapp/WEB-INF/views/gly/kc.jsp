@@ -55,7 +55,7 @@
 <section class="rt_wrap content mCustomScrollbar">
 		<div class="rt_content">
 			<div class="page_title">
-				<h2 class="fl">货物查询</h2>
+				<h2 class="fl">库存查询</h2>
 			</div>
 			<section class="mtb">
 			<form action="tzkc" method="post">

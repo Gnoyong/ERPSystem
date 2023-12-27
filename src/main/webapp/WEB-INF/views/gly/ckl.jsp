@@ -50,7 +50,7 @@
 	<jsp:include page="/WEB-INF/views/header.jsp" />
 	<!--aside nav-->
 	<!--aside nav-->
-		<jsp:include page="/WEB-INF/views/aside.jsp" />
+    <jsp:include page="/WEB-INF/views/aside.jsp"/>
 <section class="rt_wrap content mCustomScrollbar">
 <form action="ckl" method="post">
  <input type="hidden" name="hw" value="${list.name }"/>

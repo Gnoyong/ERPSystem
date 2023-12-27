@@ -9,8 +9,8 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/assets/css/style.css">
 <!--[if lt IE 9]>
-<script src="js/html5.js"></script>
-<![endif]-->
+	<script src="js/html5.js"></script>
+	<![endif]-->
 <script src="${pageContext.request.contextPath}/assets/js/jquery.js"></script>
 <script
 	src="${pageContext.request.contextPath}/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -54,7 +54,7 @@
 	<section class="rt_wrap content mCustomScrollbar">
 		<div class="rt_content">
 			<div class="page_title">
-				<!-- <h2 class="fl">会员列表</h2> -->
+				<h2 class="fl">用户列表</h2>
 				<a href="${pageContext.request.contextPath}\user\tjyh" class="fr top_rt_btn add_icon">添加新会员</a>
 			</div>
 			<section class="mtb">

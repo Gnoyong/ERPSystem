@@ -56,7 +56,7 @@
 	<section class="rt_wrap content mCustomScrollbar">
 		<div class="rt_content">
 			<div class="page_title">
-				<h2 class="fl">货物查询</h2>
+				<h2 class="fl">出库列表</h2>
 			</div>
 			<section class="mtb">
 			<form action="tzck" method="post">

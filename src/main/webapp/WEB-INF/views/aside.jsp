@@ -38,7 +38,7 @@
                     <a href="${pageContext.request.contextPath}\user\tzrk">入库单新建</a>
                 </dd>
                 <dd>
-                    <a href="${pageContext.request.contextPath}\user\tzrksh" class="active">入库单审核</a>
+                    <a href="${pageContext.request.contextPath}\user\tzrksh" >入库单审核</a>
                 </dd>
             </dl>
         </li>
@@ -46,7 +46,7 @@
             <dl>
                 <dt>出库信息管理</dt>
                 <dd>
-                    <a href="${pageContext.request.contextPath}\user\tzck">出库单新建</a>
+                    <a href="${pageContext.request.contextPath}\user\tzckxs">出库单新建</a>
                 </dd>
                 <dd>
                     <a href="${pageContext.request.contextPath}\user\tzcksh">出库单审核</a>

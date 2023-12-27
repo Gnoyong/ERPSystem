@@ -35,7 +35,7 @@
 	<jsp:include page="/WEB-INF/views/aside.jsp" />
 
 	<section class="rt_wrap content mCustomScrollbar">
-	<div id="container" style="min-width:400px;height:400px"></div>
+	<div id="container" style="min-width:400px"></div>
         <script>
         var chart = Highcharts.chart('container', {
             chart: {
@@ -86,4 +86,9 @@
 	</section>
 
 </body>
+<style>
+    #container{
+        height: 100% !important;
+    }
+</style>
 </html>

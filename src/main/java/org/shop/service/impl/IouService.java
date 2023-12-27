@@ -2,9 +2,9 @@ package org.shop.service.impl;
 
 import org.shop.dao.IouDao;
 import org.shop.pojo.Iou;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Service("iouService")
 public class IouService {
-    @Resource
+    @Autowired
     private IouDao iouDao;
 
     /**
